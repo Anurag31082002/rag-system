@@ -1,0 +1,132 @@
+{
+  "info": {
+    "_postman_id": "8e795339-bf7a-4a18-ad62-55e2be7e9189",
+    "name": "Dashboard API (Manish)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49881849",
+    "_collection_link": "https://go.postman.co/collection/49881849-8e795339-bf7a-4a18-ad62-55e2be7e9189?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get dashboard data customAPI",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Admin@123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://10.111.1.200/uat_requester_new/web/webservices/rest.php?version=1.0&json_data={     \"operation\": \"core/CustomDashboardAPI\",     \"user\": \"admin\",     \"dashboard_type\": \"dashboard\" }",
+          "protocol": "http",
+          "host": [
+            "10",
+            "111",
+            "1",
+            "200"
+          ],
+          "path": [
+            "uat_requester_new",
+            "web",
+            "webservices",
+            "rest.php"
+          ],
+          "query": [
+            {
+              "key": "version",
+              "value": "1.0"
+            },
+            {
+              "key": "json_data",
+              "value": "{     \"operation\": \"core/CustomDashboardAPI\",     \"user\": \"admin\",     \"dashboard_type\": \"dashboard\" }"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Already Work Dashboard API",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Update Dashboard API",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "Admin",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "Admin@123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "version",
+              "value": "1.0",
+              "type": "text",
+              "uuid": "4ba2dc5c-12d1-4f44-b068-c4ef5c3d9525"
+            },
+            {
+              "key": "json_data",
+              "value": "{\n  \"operation\": \"core/update_dashboard_dashlet\",\n  \"org_id\": 1,\n  \"menu_code\": \"dashboard\",\n  \"dashlets\": [\n    { \"id\": \"CUSTOM_Organization__custom_dashboard_ID_row0_col0_kpi_escalated_request\",  \"display_order\": 1 },\n    { \"id\": \"CUSTOM_Organization__custom_dashboard_ID_row0_col0_kpi_pending_request\",    \"display_order\": 2 },\n    { \"id\": \"CUSTOM_Organization__custom_dashboard_ID_row0_col0_kpi_escalated_incident\", \"display_order\": 3 },\n    { \"id\": \"CUSTOM_Organization__custom_dashboard_ID_row0_col0_open_request_userrequest\", \"is_active\": false },\n    { \"id\": \"CUSTOM_Organization__custom_dashboard_ID_row0_col0_chatbot\", \"is_active\": true}\n  ]\n}",
+              "type": "text",
+              "uuid": "424bb79e-23b0-4fa6-945c-ac1bb4866f59"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://10.111.1.200/uat_requester_new/web/webservices/rest.php",
+          "protocol": "http",
+          "host": [
+            "10",
+            "111",
+            "1",
+            "200"
+          ],
+          "path": [
+            "uat_requester_new",
+            "web",
+            "webservices",
+            "rest.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get dashboard Config",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
